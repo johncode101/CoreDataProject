@@ -12,6 +12,7 @@
 		550562652424902200BA8C97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550562642424902200BA8C97 /* ViewController.swift */; };
 		5505626A2424902600BA8C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 550562692424902600BA8C97 /* Assets.xcassets */; };
 		5505626D2424902600BA8C97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5505626B2424902600BA8C97 /* LaunchScreen.storyboard */; };
+		55ACA843242C912500BB6BBC /* CreateCompanyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ACA842242C912500BB6BBC /* CreateCompanyController.swift */; };
 		55AE32DD2429401500FEE548 /* UIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AE32DC2429401500FEE548 /* UIColors.swift */; };
 		55AE32DF242A9AB700FEE548 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AE32DE242A9AB700FEE548 /* Company.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 		550562692424902600BA8C97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5505626C2424902600BA8C97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5505626E2424902600BA8C97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55ACA842242C912500BB6BBC /* CreateCompanyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCompanyController.swift; sourceTree = "<group>"; };
 		55AE32DC2429401500FEE548 /* UIColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColors.swift; sourceTree = "<group>"; };
 		55AE32DE242A9AB700FEE548 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +68,7 @@
 				5505626E2424902600BA8C97 /* Info.plist */,
 				55AE32DC2429401500FEE548 /* UIColors.swift */,
 				55AE32DE242A9AB700FEE548 /* Company.swift */,
+				55ACA842242C912500BB6BBC /* CreateCompanyController.swift */,
 			);
 			path = CoreDataProject;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				550562612424902100BA8C97 /* AppDelegate.swift in Sources */,
 				55AE32DF242A9AB700FEE548 /* Company.swift in Sources */,
 				550562632424902100BA8C97 /* SceneDelegate.swift in Sources */,
+				55ACA843242C912500BB6BBC /* CreateCompanyController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

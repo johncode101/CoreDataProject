@@ -39,11 +39,9 @@ class CompaniesViewController: UITableViewController {
 
     @objc func handleAddCompany() {
                 
-        let createCompanyController = UIViewController()
-                
-        createCompanyController.view.backgroundColor = .green
-        
-        let navController = UINavigationController(rootViewController: createCompanyController)
+        let createCompanyController = CreateCompanyController()
+                        
+        let navController = CustomNavigationController(rootViewController: createCompanyController)
             
         navController.modalPresentationStyle = .fullScreen
             
@@ -78,18 +76,5 @@ class CompaniesViewController: UITableViewController {
         return companies.count
         
     }
-    
-    func setupNavigationStyle() {
-        
-        navigationController?.navigationBar.prefersLargeTitles = true
-
-        let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = .lightRed
-        appearance.largeTitleTextAttributes = [.foregroundColor : UIColor.white] //portrait title
-        appearance.titleTextAttributes = [.foregroundColor : UIColor.white] //landscape title
-        navigationController?.navigationBar.standardAppearance = appearance //landscape
-        navigationController?.navigationBar.compactAppearance = appearance
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance //portrait    }
-            }
 
 }
