@@ -7,17 +7,16 @@
 //
 
 import UIKit
+import CoreData
 
 protocol CreateCompanyControllerDelegate {
-    func didAddCompany(company: Company)
+    func didAddCompany(company: NewCompanies)
 }
 
 class CreateCompanyController: UITableViewController {
     
     var delegate: CreateCompanyControllerDelegate?
-    
-//    var companiesController: CompaniesViewController?
-    
+        
     let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "Name"
@@ -58,13 +57,31 @@ class CreateCompanyController: UITableViewController {
     
     @objc private func handleSave() {
         
-        dismiss(animated: true) {
-            guard let name = self.nameTextField.text else { return }
+        // This line of code bring the persistent container stack on to the handle save func
+        
+        let context = CoreDataManager.shared.persistentContainer.viewContext
+        
+        // this line inserts the companies data into coredata
+        
+        let company = NSEntityDescription.insertNewObject(forEntityName: "NewCompanies", into: context)
+        
+        // and this saves the name thats put onto the textfield onto coredata
+        
+        company.setValue(nameTextField.text, forKey: "name")
+        
+        //This lines of code are the saving structure
+        
+        do {
+            try context.save()
+            
+            //success
+            
+            dismiss(animated: true, completion: {self.delegate?.didAddCompany(company: company as! NewCompanies)
                 
-                let company = Company(name: name, founded: Date())
-                
-            self.delegate?.didAddCompany(company: company)
-            }
+            })
+        } catch let saveErr {
+            print("Failed to save company:", saveErr)
+        }
         
     }
     

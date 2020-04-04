@@ -8,7 +8,7 @@
 
 import UIKit
 
-//customernavbar to make status style white
+//customernavbar to make status style a different color
 class CustomNavigationController: UINavigationController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent

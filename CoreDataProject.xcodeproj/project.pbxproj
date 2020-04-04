@@ -15,6 +15,8 @@
 		55ACA843242C912500BB6BBC /* CreateCompanyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ACA842242C912500BB6BBC /* CreateCompanyController.swift */; };
 		55AE32DD2429401500FEE548 /* UIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AE32DC2429401500FEE548 /* UIColors.swift */; };
 		55AE32DF242A9AB700FEE548 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AE32DE242A9AB700FEE548 /* Company.swift */; };
+		55DB75A42435EF08009F6E91 /* DataStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55DB75A22435EF08009F6E91 /* DataStorage.xcdatamodeld */; };
+		55F81CBB2437F86A003C354D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F81CBA2437F86A003C354D /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		55ACA842242C912500BB6BBC /* CreateCompanyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCompanyController.swift; sourceTree = "<group>"; };
 		55AE32DC2429401500FEE548 /* UIColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColors.swift; sourceTree = "<group>"; };
 		55AE32DE242A9AB700FEE548 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		55DB75A32435EF08009F6E91 /* DataStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataStorage.xcdatamodel; sourceTree = "<group>"; };
+		55F81CBA2437F86A003C354D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				55AE32DC2429401500FEE548 /* UIColors.swift */,
 				55AE32DE242A9AB700FEE548 /* Company.swift */,
 				55ACA842242C912500BB6BBC /* CreateCompanyController.swift */,
+				55DB75A22435EF08009F6E91 /* DataStorage.xcdatamodeld */,
+				55F81CBA2437F86A003C354D /* CoreDataManager.swift */,
 			);
 			path = CoreDataProject;
 			sourceTree = "<group>";
@@ -145,9 +151,11 @@
 			files = (
 				550562652424902200BA8C97 /* ViewController.swift in Sources */,
 				55AE32DD2429401500FEE548 /* UIColors.swift in Sources */,
+				55DB75A42435EF08009F6E91 /* DataStorage.xcdatamodeld in Sources */,
 				550562612424902100BA8C97 /* AppDelegate.swift in Sources */,
 				55AE32DF242A9AB700FEE548 /* Company.swift in Sources */,
 				550562632424902100BA8C97 /* SceneDelegate.swift in Sources */,
+				55F81CBB2437F86A003C354D /* CoreDataManager.swift in Sources */,
 				55ACA843242C912500BB6BBC /* CreateCompanyController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +346,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		55DB75A22435EF08009F6E91 /* DataStorage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				55DB75A32435EF08009F6E91 /* DataStorage.xcdatamodel */,
+			);
+			currentVersion = 55DB75A32435EF08009F6E91 /* DataStorage.xcdatamodel */;
+			path = DataStorage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 550562552424902100BA8C97 /* Project object */;
 }

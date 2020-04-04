@@ -7,37 +7,53 @@
 //
 
 import UIKit
+import CoreData
+
+//This lines of code are responsible for handing off the resposiblities of the createcompanycontrollerdelegate declared on createcompanycontroller and setting up onto the index row path for the UI
 
 class CompaniesViewController: UITableViewController, CreateCompanyControllerDelegate {
-    func didAddCompany(company: Company) {
+    func didAddCompany(company: NewCompanies) {
         companies.append(company)
         let newIndexPath = IndexPath(row: companies.count - 1, section: 0)
         tableView.insertRows(at: [newIndexPath], with: .automatic)
     }
     
+    var companies = [NewCompanies]()
     
-    var companies = [
-        Company(name: "Apple", founded: Date()),
-        Company(name: "Goggle", founded: Date())
+    // This function will be responsible for fetching the data onto the UI
     
-    ]
+    private func fetchCompanies() {
+        
+        // This line of code bring the persistent container stack on to the fetching func
+
+        let context = CoreDataManager.shared.persistentContainer.viewContext
+        
+        // this line of code fetched the data from coredata into the UI
+        
+        let fetchRequest = NSFetchRequest<NewCompanies>(entityName: "NewCompanies")
+        
+        //along with this other lines of code
+        
+        do {
+            let companies = try context.fetch(fetchRequest)
+            
+            companies.forEach({ (NewCompanies) in
+                print(NewCompanies.name ?? "")
+            })
+            
+            self.companies = companies
+            self.tableView.reloadData()
+            
+        } catch let fetchErr {
+            print("Failed to fetch companies:", fetchErr)
+        }
     
-//    func addCompany(company: Company) {
-////        let tesla = Company(name: "Tesla", founded: Date())
-//        
-//        //Modify your array
-//        companies.append(company)
-//        
-//        //Insert values into your index row path
-//        let newIndexPath = IndexPath(row: companies.count - 1, section: 0)
-//        tableView.insertRows(at: [newIndexPath], with: .automatic)
-//                
-//    }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "test Saving", style: .plain, target: self, action: #selector(addCompany))
+         fetchCompanies()
                 
         view.backgroundColor = .white
         
@@ -56,6 +72,8 @@ class CompaniesViewController: UITableViewController, CreateCompanyControllerDel
         setupNavigationStyle()
 
     }
+    
+    //This function handles the navigation between controller when the add button is pressed
 
     @objc func handleAddCompany() {
                 
