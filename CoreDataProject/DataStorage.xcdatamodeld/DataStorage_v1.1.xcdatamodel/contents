@@ -6,8 +6,8 @@
         <attribute name="street" optional="YES" attributeType="String"/>
         <relationship name="employee" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Employee" inverseName="address" inverseEntity="Employee"/>
     </entity>
-    <entity name="Employee" representedClassName="Employee" syncable="YES" codeGenerationType="class">
-        <attribute name="name" optional="YES" attributeType="String"/>
+    <entity name="Employee" representedClassName="Employee" elementID="name" syncable="YES" codeGenerationType="class">
+        <attribute name="fullName" optional="YES" attributeType="String"/>
         <attribute name="type" optional="YES" attributeType="String"/>
         <relationship name="address" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address" inverseName="employee" inverseEntity="Address"/>
         <relationship name="employeeInformation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EmployeeInformation" inverseName="employee" inverseEntity="EmployeeInformation"/>
@@ -24,12 +24,13 @@
         <attribute name="founded" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="imageData" optional="YES" attributeType="Binary"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="officialName" attributeType="String" defaultValueString="NO OFFICIAL NAME"/>
         <relationship name="employees" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Employee" inverseName="newcompany" inverseEntity="Employee"/>
     </entity>
     <elements>
         <element name="Address" positionX="-134.546875" positionY="-107.9609375" width="128" height="103"/>
         <element name="Employee" positionX="-341.67578125" positionY="82.51171875" width="128" height="118"/>
         <element name="EmployeeInformation" positionX="-132.1171875" positionY="164.0078125" width="128" height="118"/>
-        <element name="NewCompanies" positionX="-537.40625" positionY="-100.18359375" width="128" height="103"/>
+        <element name="NewCompanies" positionX="-537.40625" positionY="-100.18359375" width="128" height="118"/>
     </elements>
 </model>

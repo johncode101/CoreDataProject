@@ -21,7 +21,10 @@
 		55BC457E244C0F550046CD24 /* ViewController+CreateCompanyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BC457D244C0F550046CD24 /* ViewController+CreateCompanyController.swift */; };
 		55BC4580244C41040046CD24 /* ViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BC457F244C41040046CD24 /* ViewController+UITableView.swift */; };
 		55BC4582244C4E7C0046CD24 /* EmployeesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BC4581244C4E7C0046CD24 /* EmployeesController.swift */; };
+		55C7C67B2491EE3400786045 /* EmployeeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C7C67A2491EE3400786045 /* EmployeeType.swift */; };
 		55DB75A42435EF08009F6E91 /* DataStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55DB75A22435EF08009F6E91 /* DataStorage.xcdatamodeld */; };
+		55F6E7FD24B421C400F1F922 /* CompaniesAutoUpdateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F6E7FC24B421C400F1F922 /* CompaniesAutoUpdateController.swift */; };
+		55F6E7FF24B4467B00F1F922 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F6E7FE24B4467B00F1F922 /* Service.swift */; };
 		55F81CBB2437F86A003C354D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F81CBA2437F86A003C354D /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +36,7 @@
 		550562692424902600BA8C97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5505626C2424902600BA8C97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5505626E2424902600BA8C97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5580528024BE45670009411E /* DataStorage_v1.1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataStorage_v1.1.xcdatamodel; sourceTree = "<group>"; };
 		558EA9C8244F5962001B851B /* UIViewControllers+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewControllers+Helpers.swift"; sourceTree = "<group>"; };
 		558EA9CA24501FFE001B851B /* CreateEmployeeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEmployeeController.swift; sourceTree = "<group>"; };
 		55ACA842242C912500BB6BBC /* CreateCompanyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCompanyController.swift; sourceTree = "<group>"; };
@@ -42,7 +46,10 @@
 		55BC457D244C0F550046CD24 /* ViewController+CreateCompanyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CreateCompanyController.swift"; sourceTree = "<group>"; };
 		55BC457F244C41040046CD24 /* ViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UITableView.swift"; sourceTree = "<group>"; };
 		55BC4581244C4E7C0046CD24 /* EmployeesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesController.swift; sourceTree = "<group>"; };
+		55C7C67A2491EE3400786045 /* EmployeeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeType.swift; sourceTree = "<group>"; };
 		55DB75A32435EF08009F6E91 /* DataStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataStorage.xcdatamodel; sourceTree = "<group>"; };
+		55F6E7FC24B421C400F1F922 /* CompaniesAutoUpdateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesAutoUpdateController.swift; sourceTree = "<group>"; };
+		55F6E7FE24B4467B00F1F922 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		55F81CBA2437F86A003C354D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +93,7 @@
 				55ACA842242C912500BB6BBC /* CreateCompanyController.swift */,
 				558EA9CA24501FFE001B851B /* CreateEmployeeController.swift */,
 				55BC4581244C4E7C0046CD24 /* EmployeesController.swift */,
+				55C7C67A2491EE3400786045 /* EmployeeType.swift */,
 				550562692424902600BA8C97 /* Assets.xcassets */,
 				550562622424902100BA8C97 /* SceneDelegate.swift */,
 				550562602424902100BA8C97 /* AppDelegate.swift */,
@@ -93,6 +101,8 @@
 				5505626B2424902600BA8C97 /* LaunchScreen.storyboard */,
 				5505626E2424902600BA8C97 /* Info.plist */,
 				55DB75A22435EF08009F6E91 /* DataStorage.xcdatamodeld */,
+				55F6E7FC24B421C400F1F922 /* CompaniesAutoUpdateController.swift */,
+				55F6E7FE24B4467B00F1F922 /* Service.swift */,
 			);
 			path = CoreDataProject;
 			sourceTree = "<group>";
@@ -171,11 +181,14 @@
 				558EA9CB24501FFE001B851B /* CreateEmployeeController.swift in Sources */,
 				55AE32DD2429401500FEE548 /* UIColors.swift in Sources */,
 				55BC4580244C41040046CD24 /* ViewController+UITableView.swift in Sources */,
+				55C7C67B2491EE3400786045 /* EmployeeType.swift in Sources */,
+				55F6E7FD24B421C400F1F922 /* CompaniesAutoUpdateController.swift in Sources */,
 				55DB75A42435EF08009F6E91 /* DataStorage.xcdatamodeld in Sources */,
 				550562612424902100BA8C97 /* AppDelegate.swift in Sources */,
 				558EA9C9244F5962001B851B /* UIViewControllers+Helpers.swift in Sources */,
 				55BC457A24494EF70046CD24 /* CompanyCell.swift in Sources */,
 				55AE32DF242A9AB700FEE548 /* Company.swift in Sources */,
+				55F6E7FF24B4467B00F1F922 /* Service.swift in Sources */,
 				55BC4582244C4E7C0046CD24 /* EmployeesController.swift in Sources */,
 				550562632424902100BA8C97 /* SceneDelegate.swift in Sources */,
 				55F81CBB2437F86A003C354D /* CoreDataManager.swift in Sources */,
@@ -375,9 +388,10 @@
 		55DB75A22435EF08009F6E91 /* DataStorage.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				5580528024BE45670009411E /* DataStorage_v1.1.xcdatamodel */,
 				55DB75A32435EF08009F6E91 /* DataStorage.xcdatamodel */,
 			);
-			currentVersion = 55DB75A32435EF08009F6E91 /* DataStorage.xcdatamodel */;
+			currentVersion = 5580528024BE45670009411E /* DataStorage_v1.1.xcdatamodel */;
 			path = DataStorage.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

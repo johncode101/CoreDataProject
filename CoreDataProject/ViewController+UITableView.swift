@@ -95,6 +95,7 @@ extension CompaniesViewController {
         return 45
     }
     
+    // go over this code one more time
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! CompanyCell
         let company = companies[indexPath.row]
